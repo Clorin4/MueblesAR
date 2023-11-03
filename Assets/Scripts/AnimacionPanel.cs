@@ -5,34 +5,41 @@ using UnityEngine.UI;
 
 public class AnimacionPanel : MonoBehaviour
 {
-    public Vector2 posicionInicial;
-    public Vector2 posicionFinal;
+    public Vector3 posicionInicial;
+    public Vector3 posicionFinal;
+
     public float duracion = 1.0f;
     public iTween.EaseType tipoDeInterpolacion = iTween.EaseType.easeInBounce;
-    public RectTransform panel;
+    public RectTransform panelres;
 
+    private bool show;
 
     private void Start()
     {
-        /*posicionInicial = new Vector2(Screen.width, Screen.height);
-        Resolution resolution = Screen.currentResolution;
-        float centerX = resolution.width / 2f;
-        float centerY = resolution.height / 2f;
-        centerX = posicionInicial.x;
-        centerY = posicionInicial.y;*/
+        show = true;
+        panelres = gameObject.GetComponentInParent<RectTransform>();
+        float despDinam = panelres.position.x * 5;
+
+        Vector3 pos = transform.localPosition;
+
+        posicionInicial = new Vector3(pos.x + panelres.position.x, pos.y + panelres.position.y, 0);
+        posicionFinal = new Vector3(posicionInicial.x + despDinam, posicionInicial.y, posicionInicial.z);
+
     }
 
-    public void CentrarPanelEnResolucion()
+    public void MostrarOcultarPanel()
     {
-        // Obtén el tamaño de la pantalla actual
-        Resolution resolution = Screen.currentResolution;
+        if (show)
+        {
+            OcultarPanel();
+            show = false;
+        }
+        else
+        {
+            MostrarPanel();
+            show = true;
+        }
 
-        // Calcula el centro de la pantalla
-        float centerX = resolution.width / 2f;
-        float centerY = resolution.height / 2f;
-
-        // Establece la posición del panel en el centro de la pantalla
-        panel.anchoredPosition = new Vector2(centerX, centerY);
     }
 
     public void MostrarPanel()
