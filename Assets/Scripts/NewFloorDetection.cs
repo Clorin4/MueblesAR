@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -14,7 +15,31 @@ public class NewFloorDetection : MonoBehaviour
 
     private bool objectPlaced = false;
     private GameObject placeeObject;
-    private int numMueble = 1;
+    private int numMueble = 0;
+
+    public Sprite mueble1;
+    public Sprite mueble2;
+    public Sprite mueble3;
+    public Image miniatura;
+
+    private void Update()
+    {
+        switch (numMueble)
+        {
+            case 1:
+                miniatura.sprite = mueble1;
+                break;
+            case 2:
+                miniatura.sprite = mueble2;
+                break;
+            case 3:
+                miniatura.sprite = mueble3;
+                break;
+            default:
+                //ola
+                break;
+        }
+    }
 
     private void OnEnable()
     {
@@ -102,13 +127,11 @@ public class NewFloorDetection : MonoBehaviour
 
             // Desactiva la detección de planos
             planeManager.enabled = false;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1.0f);
 
             // Vuelve a activar la detección de planos.
             planeManager.enabled = true;
-            yield return new WaitForSeconds(1.0f);
-
-            EnablePlaneMeshes(); //IMPORTANTE CHECAR ESTO!!!!!!!!
+            EnablePlaneMeshes(); 
 
         }
     }
