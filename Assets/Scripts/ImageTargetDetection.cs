@@ -64,7 +64,7 @@ public class SimpleImageTarget : MonoBehaviour
                     GameObject spawned = Instantiate(pair.prefabToPlace, trackedImage.transform);
                     spawned.transform.localPosition = Vector3.zero;
                     spawned.transform.localRotation = Quaternion.identity;
-                    spawned.transform.localScale = Vector3.one * 0.5f;  // Escala 0.5
+                    spawned.transform.localScale = Vector3.one * 0.01f;  // Escala 0.5
                     spawnedPrefabs[imageName] = spawned;
                 }
                 else

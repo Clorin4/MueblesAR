@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 7ba999c54092bb840af5b978dc3ef339
+guid: 4220039044c1c254da2c4fd46fff9ce1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 10107_Computer_Printer_v1Mat
-    second: {fileID: 2100000, guid: c0675604fe93196458555645a7bd921e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
