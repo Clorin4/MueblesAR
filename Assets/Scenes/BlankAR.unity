@@ -217,6 +217,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 415397490}
   - {fileID: 397670477}
   - {fileID: 590974813}
   m_Father: {fileID: 0}
@@ -271,28 +272,107 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trackedImageManager: {fileID: 1659859604}
+  infoTextUI: {fileID: 565588283}
+  PanelText: {fileID: 415397489}
   imagePrefabPairs:
   - imageName: Imagen1
-    prefabToPlace: {fileID: 1092660299285658362, guid: fbf752fe120d43a44a0f0f7e8d5536ce,
-      type: 3}
-  - imageName: Imagen2
     prefabToPlace: {fileID: 3208062532128208097, guid: 9533b1858b33e124f8f31dde31349244,
       type: 3}
-  - imageName: Imagen3
-    prefabToPlace: {fileID: 4151701999780189718, guid: 40b6ea6074a07b5489d1d20bd6ad2a8c,
+    finalScale: {x: 0.0125, y: 0.0125, z: 0.0125}
+    finalRotationEuler: {x: 90, y: 180, z: 0}
+    infoText: " Dispositivo: Smartphone  \r\n\u27A4 Rol como host: \r\nSe conecta
+      a redes tanto inal\xE1mbricas (Wi-Fi) como celulares (4G/5G), obteniendo una
+      direcci\xF3n IP en cada contexto. \r\nConsume y env\xEDa datos a servidores
+      remotos constantemente (apps, navegaci\xF3n, APIs). \r\nTambi\xE9n puede fungir
+      como punto de acceso (tethering/hotspot), facilitando conectividad a otros
+      hosts. \r\n\u27A4 Caracter\xEDsticas t\xE9cnicas relevantes: \r\nDirecci\xF3n
+      IP p\xFAblica (por red celular) o privada (en LAN Wi-Fi). \r\nProtocolos comunes:
+      HTTP(S), MQTT, WebSockets, DNS, entre otros. \r\nComunicaci\xF3n bidireccional
+      con servicios cloud y dispositivos IoT. \r\nUso intensivo de red para actualizaciones,
+      mensajer\xEDa instant\xE1nea, sincronizaci\xF3n en la nube, etc. "
+  - imageName: Imagen2
+    prefabToPlace: {fileID: 4390606212938764018, guid: 369ac687229c9b548b5089368de88919,
       type: 3}
-  - imageName: Imagen4
+    finalScale: {x: 0.0025, y: 0.0025, z: 0.0025}
+    finalRotationEuler: {x: 0, y: 180, z: 0}
+    infoText: "Host tipo Tablet\r\n Roles:  Consumo de contenido (videos, libros,
+      internet).\r\n \u2022 Tareas b\xE1sicas (correo, documentos, videollamadas).\r\n
+      \u2022 Uso educativo y presentaciones.\r\n \u2022 Alta portabilidad.\r\n Caracter\xEDsticas:\r\n
+      \u2022 Procesador de bajo consumo, menos potente.\r\n \u2022 RAM: 2 a 8 GB.\r\n
+      \u2022 Almacenamiento limitado (32 GB a 512 GB).\r"
+  - imageName: Imagen3
     prefabToPlace: {fileID: 8022656546958316555, guid: 9065a4c9b830aa541bfb18802800a343,
       type: 3}
-  - imageName: Imagen5
+    finalScale: {x: 0.05, y: 0.05, z: 0.05}
+    finalRotationEuler: {x: -90, y: 180, z: 0}
+    infoText: "Dispositivo: Smart TV \r\n\u27A4 Rol como host: \r\nOpera como un
+      cliente en la red local que consume contenido desde servidores remotos (Netflix,
+      YouTube, etc.) o de servidores locales (DLNA, Plex). Algunas tambi\xE9n ofrecen
+      servicios b\xE1sicos de servidor (como screen mirroring o servidor de medios).
+      \r\r\nParticipa activamente en la red a trav\xE9s de la recepci\xF3n de streaming,
+      actualizaciones y comunicaci\xF3n con otros dispositivos (tel\xE9fonos, altavoces
+      inteligentes, etc.). \r\n\u27A4 Caracter\xEDsticas t\xE9cnicas relevantes:
+      \r\n- Direcci\xF3n IP din\xE1mica (DHCP), con posibilidad de configuraci\xF3n
+      manual. \r\n- Protocolos t\xEDpicos: HTTP(S), TCP/IP, DLNA, Miracast, AirPlay,
+      UPnP, DNS. \r\n- Conectividad por Ethernet o Wi-Fi, a veces Bluetooth. \r"
+  - imageName: Imagen4
     prefabToPlace: {fileID: 8040201106401116377, guid: 4ff8d250ad460df4f94e1c6be9caba50,
       type: 3}
-  - imageName: Imagen6
-    prefabToPlace: {fileID: 919132149155446097, guid: 7ba999c54092bb840af5b978dc3ef339,
+    finalScale: {x: 0.002, y: 0.002, z: 0.002}
+    finalRotationEuler: {x: 0, y: 180, z: 0}
+    infoText: "Dispositivo: Consola de videojuegos \r\n\u27A4 Rol como host: \r\nSe
+      comporta como un cliente dentro de una red al interactuar con servicios de
+      videojuegos en l\xEDnea, streaming y autenticaci\xF3n. \r\nPuede establecer
+      conexiones P2P (peer-to-peer) con otras consolas en juegos multijugador. \r\nParticipa
+      activamente en la red tanto en LAN (juegos locales) como en internet. \r\n\u27A4
+      Caracter\xEDsticas t\xE9cnicas relevantes: \r\nDirecci\xF3n IP obtenida v\xEDa
+      DHCP o configurada manualmente. \r\nProtocolos t\xEDpicos: TCP/UDP (multijugador),
+      HTTP(S) (actualizaciones, servicios), DNS. \r\nSincronizaci\xF3n de datos con
+      servidores de usuario, descargas de contenido y servicios multimedia. \r\nInteroperabilidad
+      con otros hosts (chat de voz, mensajer\xEDa, juego cruzado). "
+  - imageName: Imagen5
+    prefabToPlace: {fileID: 4151701999780189718, guid: 40b6ea6074a07b5489d1d20bd6ad2a8c,
       type: 3}
+    finalScale: {x: 0.02, y: 0.02, z: 0.02}
+    finalRotationEuler: {x: 0, y: 90, z: 0}
+    infoText: "Dispositivo: Laptop / Port\xE1til \r\n\u27A4 Rol como host: \r\nAct\xFAa
+      principalmente como cliente dentro de una red, aunque tambi\xE9n puede comportarse
+      como servidor local (ej. host de servidor web, SSH, compartici\xF3n de archivos).
+      \r\nSe comunica con diversos servicios en internet (navegador, correo, videollamadas)
+      y con otros dispositivos en red local (impresoras, servidores NAS, etc.). \r\n\u27A4
+      Caracter\xEDsticas t\xE9cnicas relevantes: \r\nDirecci\xF3n IP: din\xE1mica
+      (DHCP) o est\xE1tica. \r\nSoporte completo de protocolos TCP/IP, HTTP(S), FTP,
+      DNS, SMTP, etc. \r\nConectividad por interfaces Ethernet, Wi-Fi o Bluetooth.
+      \r\nPuede ejecutar servicios de red (servidor web, servidor de base de datos,
+      etc.). "
+  - imageName: Imagen6
+    prefabToPlace: {fileID: 1212014731797937845, guid: b0d7daf9d3fc94f429b7105f6dabc6a7,
+      type: 3}
+    finalScale: {x: 0.045, y: 0.045, z: 0.045}
+    finalRotationEuler: {x: 0, y: 180, z: 0}
+    infoText: "Dispositivo: PC de escritorio\r\n Roles:\r\nTrabajo profesional (programaci\xF3n,
+      dise\xF1o, edici\xF3n).\r\n \u2022 Juegos de alto rendimiento.\r\n \u2022 An\xE1lisis
+      de datos, simulaciones.\r\n \u2022 Uso en oficinas, empresas y hogares fijos.\r\n
+      Caracter\xEDsticas:\r\n \u2022 Procesador potente.\r\n \u2022 RAM: desde 8
+      GB hasta 64 GB o m\xE1s.\r\n \u2022 Almacenamiento grande (256 GB a varios
+      TB).\r"
   - imageName: Imagen7
     prefabToPlace: {fileID: 1092660299285658362, guid: fbf752fe120d43a44a0f0f7e8d5536ce,
       type: 3}
+    finalScale: {x: 0.002, y: 0.002, z: 0.002}
+    finalRotationEuler: {x: 0, y: 180, z: 0}
+    infoText: "Dispositivo: Impresora de red (moderna) \r\n\u27A4 Rol como host:
+      \r\nFunciona como un dispositivo conectado a la red local (LAN), con su propia
+      direcci\xF3n IP. Puede recibir trabajos de impresi\xF3n desde laptops, smartphones,
+      PCs y servidores, lo que la convierte en un host pasivo-receptor dentro de
+      la red. \r\r\nAlgunas impresoras modernas permiten funcionalidades avanzadas
+      como escaneo hacia red, impresi\xF3n remota v\xEDa servicios cloud (Google
+      Cloud Print, HP ePrint), o incluso alojar p\xE1ginas web de configuraci\xF3n
+      (mini-servidores web internos). \r\n\u27A4 Caracter\xEDsticas t\xE9cnicas relevantes:
+      \r\n- Direcci\xF3n IP asignada por DHCP o configurada manualmente (est\xE1tica).
+      \r\n- Protocolos comunes: IPP (Internet Printing Protocol), LPD/LPR, SMB, HTTP(S),
+      SNMP, AirPrint. \r\n- Conectividad por Ethernet, Wi-Fi o USB (con soporte de
+      red compartida). \r "
 --- !u!1 &397670476
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,6 +467,82 @@ MonoBehaviour:
   duracion: 1
   tipoDeInterpolacion: 2
   panelres: {fileID: 397670477}
+--- !u!1 &415397489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415397490}
+  - component: {fileID: 415397492}
+  - component: {fileID: 415397491}
+  m_Layer: 5
+  m_Name: PanelText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &415397490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415397489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 565588282}
+  m_Father: {fileID: 263656585}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -62.5, y: -428.5}
+  m_SizeDelta: {x: -285, y: -933}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &415397491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415397489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 0.1
+--- !u!222 &415397492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415397489}
+  m_CullTransparentMesh: 1
 --- !u!1 &422218013
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +637,140 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &565588281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565588282}
+  - component: {fileID: 565588284}
+  - component: {fileID: 565588283}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &565588282
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565588281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 415397490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.4242, y: 2.9302}
+  m_SizeDelta: {x: 2771.0747, y: 480.7862}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &565588283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565588281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 2
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 0.2216981, b: 0.2995282, a: 1}
+    topRight: {r: 1, g: 0.2216981, b: 0.2995282, a: 1}
+    bottomLeft: {r: 1, g: 0.81651866, b: 0.5707547, a: 1}
+    bottomRight: {r: 1, g: 0.81651866, b: 0.5707547, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 32
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &565588284
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565588281}
+  m_CullTransparentMesh: 1
 --- !u!1 &590974812
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,9 +1247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 4776765576899091622, guid: 3738bd65ede154463b2c35064b9e5fdb,
-    type: 3}
-  m_DetectionMode: 1
+  m_PlanePrefab: {fileID: 0}
+  m_DetectionMode: -1
 --- !u!114 &1659859601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,8 +1338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000013351, y: -68}
-  m_SizeDelta: {x: 1679.0933, y: 759.7734}
+  m_AnchoredPosition: {x: 0.000013351, y: -162.90045}
+  m_SizeDelta: {x: 1679.0933, y: 949.5743}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1988606659
 MonoBehaviour:
@@ -1086,13 +1375,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
+  m_enableVertexGradient: 1
+  m_colorMode: 2
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0.2216981, b: 0.2995282, a: 1}
+    topRight: {r: 1, g: 0.2216981, b: 0.2995282, a: 1}
+    bottomLeft: {r: 1, g: 0.81651866, b: 0.5707547, a: 1}
+    bottomRight: {r: 1, g: 0.81651866, b: 0.5707547, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
